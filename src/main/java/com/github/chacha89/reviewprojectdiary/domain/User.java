@@ -29,7 +29,9 @@ public class User {
     @Column(name = "user_image")
     private String userImage;
 
-    @Column(name = "user_intro", nullable = false)
+    // userIntro : 나중에 프로필 생성에서 nullable = false 로 다시 설정할 것.
+    // Error Message: "...not-null property references a null or transient value..."
+    @Column(name = "user_intro")
     private String userIntro;
 
     @Column(name = "created_at", nullable = false, updatable = false)
