@@ -36,9 +36,45 @@ public class Diary {
     @Column(name = "updated_at", nullable = false)
     @LastModifiedDate
     private LocalDateTime updatedAt;
-
+    
     // 생성자
     public Diary() {}
 
+    public Diary(User user, String title, String image, String content) {
+        this.user = user;
+        this.title = title;
+        this.image = image;
+        this.content = content;
+    }
+
     // 기능
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
 }
